@@ -1,0 +1,528 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>SAML Request | express-saml2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./signed_saml_request.html" />
+    
+    
+    <link rel="prev" href="./basic_service_provider.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3.1" data-basepath="." data-revision="Tue Oct 27 2015 16:06:16 GMT+0800 (HKT)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basics.html">
+            
+                
+                    <a href="./basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="knowledge.html">
+            
+                
+                    <a href="./knowledge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Knowledge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic_identity_provider.html">
+            
+                
+                    <a href="./basic_identity_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Identity Provider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic_service_provider.html">
+            
+                
+                    <a href="./basic_service_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Service Provider
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="send_a_saml_request.html">
+            
+                
+                    <a href="./send_a_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="signed_saml_request.html">
+            
+                
+                    <a href="./signed_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Signed SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="receive_a_saml_response.html">
+            
+                
+                    <a href="./receive_a_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="signed_saml_response.html">
+            
+                
+                    <a href="./signed_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Signed SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="encrypted_assertion.html">
+            
+                
+                    <a href="./encrypted_assertion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Encrypted SAML Response
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="work_examples.html">
+            
+                
+                    <a href="./work_examples.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Work with OneLogin
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="advanced.html">
+            
+                
+                    <a href="./advanced.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Advanced
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="configuration_without_metadata.html">
+            
+                
+                    <a href="./configuration_without_metadata.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Configuration without metadata
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="custom_templates.html">
+            
+                
+                    <a href="./custom_templates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Custom templates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="multiple_entities.html">
+            
+                
+                    <a href="./multiple_entities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Multiple entities
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="metadata_distribution.html">
+            
+                
+                    <a href="./metadata_distribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Metadata distribution
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >express-saml2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="send-a-saml-request">Send a SAML Request</h1>
+<p>When we apply SP-initiated SSO, our Service Provider have to send a SAML Request to Identity Provider.</p>
+<p>SAML Request is in XML format, asking if IdP can authenticate this user. The following is a sample request without signature.</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">samlp:AuthnRequest</span> 
+        <span class="hljs-attribute">xmlns:samlp</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span> 
+        <span class="hljs-attribute">xmlns:saml</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;</span> 
+        <span class="hljs-attribute">ID</span>=<span class="hljs-value">&quot;_809707f0030a5d00620c9d9df97f627afe9dcc24&quot;</span> 
+        <span class="hljs-attribute">Version</span>=<span class="hljs-value">&quot;2.0&quot;</span> <span class="hljs-attribute">ProviderName</span>=<span class="hljs-value">&quot;SP test&quot;</span> 
+        <span class="hljs-attribute">IssueInstant</span>=<span class="hljs-value">&quot;2014-07-16T23:52:45Z&quot;</span> 
+        <span class="hljs-attribute">Destination</span>=<span class="hljs-value">&quot;http://idp.example.com/SSOService.php&quot;</span> 
+        <span class="hljs-attribute">ProtocolBinding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> 
+        <span class="hljs-attribute">AssertionConsumerServiceURL</span>=<span class="hljs-value">&quot;https://sp.example.org/sp/sso&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">saml:Issuer</span>&gt;</span>https://sp.example.org/metadata<span class="hljs-tag">&lt;/<span class="hljs-title">saml:Issuer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">samlp:NameIDPolicy</span> <span class="hljs-attribute">Format</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&quot;</span> <span class="hljs-attribute">AllowCreate</span>=<span class="hljs-value">&quot;true&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">samlp:RequestedAuthnContext</span> <span class="hljs-attribute">Comparison</span>=<span class="hljs-value">&quot;exact&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">saml:AuthnContextClassRef</span>&gt;</span>urn:oasis:names:tc:SAML:2.0:ac:classes:Password<span class="hljs-tag">&lt;/<span class="hljs-title">saml:AuthnContextClassRef</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">samlp:RequestedAuthnContext</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">samlp:AuthnRequest</span>&gt;</span>
+</code></pre>
+<p>Different bindings can be used to send this request, we support Redirect-Binding and Post-Binding. </p>
+<p><strong>Redirect-Binding</strong></p>
+<p>It means that the XML is embedded as an URL parameter and redirect to the SSO endpoint of IdP. Because of different length limitation in different browsers, it&apos;s required to deflate Request.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> saml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-saml2&apos;</span>);
+<span class="hljs-keyword">var</span> sp = saml.ServiceProvider(<span class="hljs-string">&apos;./metadata_sp.xml&apos;</span>);
+<span class="hljs-keyword">var</span> idp = saml.IdentityProvider(<span class="hljs-string">&apos;./metadata_idp.xml&apos;</span>);
+</code></pre>
+<p>The SSO endpoint of IdP is specified in their metadata. For example:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">SingleSignOnService</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;https://idp.example.org/sso/SingleSignOnService&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">SingleSignOnService</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;https://idp.example.org/sso/SingleSignOnService&quot;</span>/&gt;</span>
+</code></pre>
+<p>There may be more than one SSO endpoint, to support different bindings. By using our entity level API, you can just write your initiation point in any route you want as follow:</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp,<span class="hljs-string">&apos;redirect&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+        res.redirect(url);
+    });
+});
+</code></pre>
+<p>By applying the preference of SP and IdP, <code>sp.sendLoginRequest</code>returns an URL which is in following general format:</p>
+<p><a href="https://idp.example.org/sso/SingleSignOnService?SAMLRequest=www&amp;SigAlg=xxx&amp;RelayState=yyy&amp;Signature=zzz" target="_blank">https://idp.example.org/sso/SingleSignOnService?SAMLRequest=www&amp;SigAlg=xxx&amp;RelayState=yyy&amp;Signature=zzz</a></p>
+<p>The parameters <strong>SigAlg</strong> and <strong>Signature</strong> is optional in case IdP requests your SAML Request should be signed. <strong>relayState</strong> is also optional if the application needs a deep link to access.</p>
+<p>All the corresponding values are URL-encoded. <strong>Signature</strong> is already Base64-encoded and the deflated <strong>SAMLRequest</strong> should be Base64-encoded.</p>
+<p><strong>Post-Binding</strong></p>
+<p>The Request XML is sent via a form post instead of embedding in URL parameters. By using the same method as in Redirect-Binding:</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp, <span class="hljs-string">&apos;post&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">request</span>) </span>{
+        res.render(<span class="hljs-string">&apos;actions&apos;</span>,request);
+    });
+});
+</code></pre>
+<p>You can simply change the second argument from &apos;redirect&apos; to &apos;post&apos;. This time the callback function returns an object instead of a string. It is then fed to a generic form post template as follow:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">form</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;saml-form&quot;</span> <span class="hljs-attribute">method</span>=<span class="hljs-value">&quot;post&quot;</span> <span class="hljs-attribute">action</span>=<span class="hljs-value">&quot;{{entityEndpoint}}&quot;</span> <span class="hljs-attribute">autocomplete</span>=<span class="hljs-value">&quot;off&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;hidden&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;{{actionType}}&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;{{actionValue}}&quot;</span> /&gt;</span>
+    {{#if relayState}}
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;hidden&quot;</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;RelayState&quot;</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">&quot;{{relayState}}&quot;</span> /&gt;</span>
+    {{/if}}
+<span class="hljs-tag">&lt;/<span class="hljs-title">form</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+    <span class="hljs-comment">// Automatic form submission</span>
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        <span class="hljs-built_in">document</span>.forms[<span class="hljs-number">0</span>].submit();
+    })();
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>Handlebar view engine is used in this example, you may choose your own and configure in your <code>app.js</code>.</p>
+<pre><code class="lang-javascript">app.engine(<span class="hljs-string">&apos;handlebars&apos;</span>, exphbs({defaultLayout: <span class="hljs-string">&apos;main&apos;</span>}));
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;handlebars&apos;</span>);
+</code></pre>
+<p>After those values are filled into the tags, the form will be automatically submit.</p>
+<p><strong>What&apos;s the next ?</strong></p>
+<p>Identity Provider parses SP&apos;s request, then a SAML Response is sent back to SP. The response includes the authentication result. SP can then take action to create session for authenticated user if the result is successful.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./basic_service_provider.html" class="navigation navigation-prev " aria-label="Previous page: Service Provider"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./signed_saml_request.html" class="navigation navigation-next " aria-label="Next page: Signed SAML Request"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Work with OneLogin | express-saml2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./advanced.html" />
+    
+    
+    <link rel="prev" href="./encrypted_assertion.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.4" data-basepath="." data-revision="Tue Oct 27 2015 16:06:16 GMT+0800 (HKT)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basics.html">
+            
+                
+                    <a href="./basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="knowledge.html">
+            
+                
+                    <a href="./knowledge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Knowledge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic_identity_provider.html">
+            
+                
+                    <a href="./basic_identity_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Identity Provider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic_service_provider.html">
+            
+                
+                    <a href="./basic_service_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Service Provider
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="send_a_saml_request.html">
+            
+                
+                    <a href="./send_a_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="signed_saml_request.html">
+            
+                
+                    <a href="./signed_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Signed SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="receive_a_saml_response.html">
+            
+                
+                    <a href="./receive_a_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="signed_saml_response.html">
+            
+                
+                    <a href="./signed_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Signed SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="encrypted_assertion.html">
+            
+                
+                    <a href="./encrypted_assertion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Encrypted SAML Response
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="work_examples.html">
+            
+                
+                    <a href="./work_examples.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Work with OneLogin
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="advanced.html">
+            
+                
+                    <a href="./advanced.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Advanced
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="configuration_without_metadata.html">
+            
+                
+                    <a href="./configuration_without_metadata.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Configuration without metadata
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="custom_templates.html">
+            
+                
+                    <a href="./custom_templates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Custom templates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="multiple_entities.html">
+            
+                
+                    <a href="./multiple_entities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Multiple entities
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="metadata_distribution.html">
+            
+                
+                    <a href="./metadata_distribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Metadata distribution
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >express-saml2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="work-with-onelogin">Work with OneLogin</h1>
+<p>In this chapter, we will make an sample application that implements IdP-initiated and SP-initiated SSO.</p>
+<p>Express.js is our default web framework in development. In fact, you can use other web framworks (e.g. koa, Loopback, Sails.js, Kraken.js ... etc) if you don&apos;t care the prefix of module is<code>express-</code>.</p>
+<p><strong>1. Generate your express application</strong></p>
+<p>See the official documentation <a href="http://expressjs.com/starter/installing.html" target="_blank">here</a></p>
+<p><strong>2. Prepare the metadata from OneLogin and the self one</strong></p>
+<p>This is the metadata published by OneLogin</p>
+<pre><code class="lang-xml"><span class="hljs-pi">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">EntityDescriptor</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;</span> <span class="hljs-attribute">entityID</span>=<span class="hljs-value">&quot;https://app.onelogin.com/saml/metadata/487043&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">IDPSSODescriptor</span> <span class="hljs-attribute">xmlns:ds</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span> <span class="hljs-attribute">protocolSupportEnumeration</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">KeyDescriptor</span> <span class="hljs-attribute">use</span>=<span class="hljs-value">&quot;signing&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ds:KeyInfo</span> <span class="hljs-attribute">xmlns:ds</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ds:X509Data</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ds:X509Certificate</span>&gt;</span>MIIEFzCCAv+gAwIBAgIUGn44ShzpiI8UDq2qKb7RPuULLgAwDQYJKoZIhvcNAQEFBQAwWDELMAkGA1UEBhMCVVMxETAPBgNVBAoMCEJhc2ggTGFiMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxHzAdBgNVBAMMFk9uZUxvZ2luIEFjY291bnQgNzA2MDkwHhcNMTUxMDIyMDE0MTUxWhcNMjAxMDIzMDE0MTUxWjBYMQswCQYDVQQGEwJVUzERMA8GA1UECgwIQmFzaCBMYWIxFTATBgNVBAsMDE9uZUxvZ2luIElkUDEfMB0GA1UEAwwWT25lTG9naW4gQWNjb3VudCA3MDYwOTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOS0Ced6VucP8FGDzcMSwOgi1u98MtTrBOuYDDlIT7QJ2okwu1qx0D1/XUpVDZCrvblie85H/HZIDO8TgJ3roXy0VNlAwuJ95TaADinc6hZGYLAfMcz35ihg5MZIoDXxB/29GMgTrF5xozdndKJdcYf5HmyLjL2uULQ22ldXOxm9uA8K17LRnDApOIfT73EEG+Zjch9EuvUh7CqR9HrmUXLsYHcijKt7KfruA1UgKRT251i7bm5dWuj/Eq87O2qH2fTDTb8VVWro5yuQXrs3KP27IYHYukkhVBbAq8dhfpUt7Fuv/Ia0oZTvps0b6VDiB3mvYKrquQPEA61YrnVlT2MCAwEAAaOB2DCB1TAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQ0uWb6LdIG00ptY49iAP/ydNaGZDCBlQYDVR0jBIGNMIGKgBQ0uWb6LdIG00ptY49iAP/ydNaGZKFcpFowWDELMAkGA1UEBhMCVVMxETAPBgNVBAoMCEJhc2ggTGFiMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxHzAdBgNVBAMMFk9uZUxvZ2luIEFjY291bnQgNzA2MDmCFBp+OEoc6YiPFA6tqim+0T7lCy4AMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQUFAAOCAQEATa7tS0aG4o+GW0fBTKt2NboI7O0S9msDM1PRUeYV69pM0UZzDph/fymoLo31BHu/FqwVQDTOxXw+Tq536I5hRSFhcS3Z8x6xXUwSCJ8JXYw8MbTzbf3lrIUccZl19fmAklrOF9c8Z7ZSrVa2N6xgmS03xD/FcznC053bvqH8nQ4v+H39mXsAbK+sfp5hMM5zD9fd332zwFm8Zc52mp+G+bv6+WI8IKOOk/5LlA6JexUbZdF4ZqSCzzKMrnNWn/GSUdgqtSwqXa9hCY4m86e4cqEZZ8+JB5/7Nx4FPU3uSzVa7Ird4xbkxahpws42MwyWMRPg56fjVHzN1e1l00Qfbw==<span class="hljs-tag">&lt;/<span class="hljs-title">ds:X509Certificate</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ds:X509Data</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ds:KeyInfo</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">KeyDescriptor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">NameIDFormat</span>&gt;</span>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress<span class="hljs-tag">&lt;/<span class="hljs-title">NameIDFormat</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SingleSignOnService</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;https://esaml2.onelogin.com/trust/saml2/http-post/sso/487043&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SingleSignOnService</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;https://esaml2.onelogin.com/trust/saml2/http-post/sso/487043&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SingleSignOnService</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:SOAP&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;https://esaml2.onelogin.com/trust/saml2/soap/sso/487043&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">IDPSSODescriptor</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ContactPerson</span> <span class="hljs-attribute">contactType</span>=<span class="hljs-value">&quot;technical&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SurName</span>&gt;</span>Support<span class="hljs-tag">&lt;/<span class="hljs-title">SurName</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">EmailAddress</span>&gt;</span>support@onelogin.com<span class="hljs-tag">&lt;/<span class="hljs-title">EmailAddress</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ContactPerson</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">EntityDescriptor</span>&gt;</span>
+</code></pre>
+<p>This is our application metadata:</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">EntityDescriptor</span>
+ <span class="hljs-attribute">xmlns:md</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;</span>
+ <span class="hljs-attribute">xmlns:saml</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;</span>
+ <span class="hljs-attribute">xmlns:ds</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span>
+ <span class="hljs-attribute">entityID</span>=<span class="hljs-value">&quot;http://localhost:3000/sso/metadata&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">SPSSODescriptor</span> <span class="hljs-attribute">WantAssertionsSigned</span>=<span class="hljs-value">&quot;true&quot;</span> <span class="hljs-attribute">protocolSupportEnumeration</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">NameIDFormat</span>&gt;</span>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress<span class="hljs-tag">&lt;/<span class="hljs-title">NameIDFormat</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">AssertionConsumerService</span> <span class="hljs-attribute">isDefault</span>=<span class="hljs-value">&quot;true&quot;</span> <span class="hljs-attribute">index</span>=<span class="hljs-value">&quot;0&quot;</span> <span class="hljs-attribute">Binding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> <span class="hljs-attribute">Location</span>=<span class="hljs-value">&quot;http://localhost:3000/sso/acs&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">SPSSODescriptor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">EntityDescriptor</span>&gt;</span>
+</code></pre>
+<p>The above two metadata files are saved in the same directory as <code>sso.js</code>.</p>
+<p><strong>3. Add a route for SSO implementation</strong></p>
+<p>Make sure all dependencies are installed first:</p>
+<pre><code class="lang-bash">$ npm install
+</code></pre>
+<p>Add a file <code>sso.js</code> under <code>/routes</code> folder</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// This is /routes/sso.js</span>
+<span class="hljs-keyword">var</span> saml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-saml2&apos;</span>);
+<span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">var</span> router = express.Router();
+<span class="hljs-keyword">var</span> ServiceProvider = saml.ServiceProvider;
+<span class="hljs-keyword">var</span> IdentityProvider = saml.IdentityProvider;
+
+<span class="hljs-comment">// Configure your endpoint for IdP-initiated / SP-initiated SSO</span>
+<span class="hljs-keyword">var</span> sp = ServiceProvider(<span class="hljs-string">&apos;../metadata_sp.xml&apos;</span>);
+<span class="hljs-keyword">var</span> idp = IdentityProvider(<span class="hljs-string">&apos;../onelogin_metadata_487043.xml&apos;</span>);
+
+<span class="hljs-comment">// Release the metadata publicly</span>
+router.get(<span class="hljs-string">&apos;/metadata&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
+    res.header(<span class="hljs-string">&apos;Content-Type&apos;</span>,<span class="hljs-string">&apos;text/xml&apos;</span>).send(sp.getMetadata());
+});
+
+<span class="hljs-comment">// Access URL for implementing SP-init SSO</span>
+router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp,<span class="hljs-string">&apos;redirect&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+        res.redirect(url);
+    });
+});
+
+<span class="hljs-comment">// If your application only supports IdP-initiated SSO, just make this route is enough</span>
+<span class="hljs-comment">// This is the assertion service url where SAML Response is sent to</span>
+router.post(<span class="hljs-string">&apos;/acs&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
+    sp.parseLoginResponse(idp, <span class="hljs-string">&apos;post&apos;</span>, req, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">parseResult</span>) </span>{
+        res.send(<span class="hljs-string">&apos;Validate the SAML Response successfully !&apos;</span>);
+    });
+});
+</code></pre>
+<p>By applying the above defined route,
+users access <strong>/spinitsso-redirect</strong> to start SSO in SP side. The initiation uses Redirect-binding. Users can also login OneLogin first and start SSO in IdP side.</p>
+<p><strong>4. Modify the app.js to include the path <code>/sso/*</code></strong></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// This is app.js</span>
+<span class="hljs-comment">// ...</span>
+<span class="hljs-keyword">var</span> routes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/index&apos;</span>);
+<span class="hljs-keyword">var</span> sso = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/sso&apos;</span>);
+<span class="hljs-comment">// ...</span>
+app.use(<span class="hljs-string">&apos;/&apos;</span>, routes);
+app.use(<span class="hljs-string">&apos;/sso&apos;</span>, sso);
+<span class="hljs-comment">// ...</span>
+</code></pre>
+<p><strong>5. Start the server</strong></p>
+<pre><code class="lang-bash">$ npm start
+</code></pre>
+<p>and also access <a href="http://localhost:3000/spinitsso-redirect" target="_blank">http://localhost:3000/spinitsso-redirect</a> or login <a href="https://esaml2.onelogin.com/login" target="_blank">OneLogin</a> first and click the app <code>esaml2-example-3000</code>.</p>
+<p>The credential for OneLogin testing is:</p>
+<p>Account Name: <strong>user@esaml2.com</strong><br>
+Password: <strong>Tk2eQc%9</strong></p>
+<p>You will see the message <code>Validate the SAML Response successfully !</code> when you are successfully log-in OneLogin app through SP-initiated SSO. </p>
+<p>OR</p>
+<p>You click the app icon of <code>esaml2-example-3000</code> after you have logged into OneLogin.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./encrypted_assertion.html" class="navigation navigation-prev " aria-label="Previous page: Encrypted SAML Response"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./advanced.html" class="navigation navigation-next " aria-label="Next page: Advanced"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

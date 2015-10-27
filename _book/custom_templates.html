@@ -1,0 +1,553 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Custom templates | express-saml2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./multiple_entities.html" />
+    
+    
+    <link rel="prev" href="./configuration_without_metadata.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="2.2" data-basepath="." data-revision="Tue Oct 27 2015 16:06:16 GMT+0800 (HKT)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basics.html">
+            
+                
+                    <a href="./basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="knowledge.html">
+            
+                
+                    <a href="./knowledge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Knowledge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic_identity_provider.html">
+            
+                
+                    <a href="./basic_identity_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Identity Provider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic_service_provider.html">
+            
+                
+                    <a href="./basic_service_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Service Provider
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="send_a_saml_request.html">
+            
+                
+                    <a href="./send_a_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="signed_saml_request.html">
+            
+                
+                    <a href="./signed_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Signed SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="receive_a_saml_response.html">
+            
+                
+                    <a href="./receive_a_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="signed_saml_response.html">
+            
+                
+                    <a href="./signed_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Signed SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="encrypted_assertion.html">
+            
+                
+                    <a href="./encrypted_assertion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Encrypted SAML Response
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="work_examples.html">
+            
+                
+                    <a href="./work_examples.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Work with OneLogin
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="advanced.html">
+            
+                
+                    <a href="./advanced.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Advanced
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="configuration_without_metadata.html">
+            
+                
+                    <a href="./configuration_without_metadata.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Configuration without metadata
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="custom_templates.html">
+            
+                
+                    <a href="./custom_templates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Custom templates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="multiple_entities.html">
+            
+                
+                    <a href="./multiple_entities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Multiple entities
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="metadata_distribution.html">
+            
+                
+                    <a href="./metadata_distribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Metadata distribution
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >express-saml2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="custom-templates">Custom templates</h1>
+<p>Developer can design their own request and response template for log-in and log-out respectively. There are optional parameters in setting object.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> saml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-saml2&apos;</span>);
+
+<span class="hljs-comment">// Load the template every time before each request/response is sent</span>
+<span class="hljs-keyword">var</span> sp = saml.ServiceProvider({
+    <span class="hljs-comment">//...</span>
+    loginRequestTemplate: <span class="hljs-string">&apos;./loginResponseTemplate.xml&apos;</span>
+    <span class="hljs-comment">//...</span>
+},<span class="hljs-string">&apos;./metadata_sp.xml&apos;</span>);
+
+<span class="hljs-comment">// or load the template once the application is cached</span>
+<span class="hljs-keyword">var</span> sp = saml.ServiceProvider({
+    <span class="hljs-comment">//...</span>
+    loginRequestTemplate: <span class="hljs-string">&apos;&lt;saml:...&gt;&apos;</span>
+    <span class="hljs-comment">//...</span>
+},<span class="hljs-string">&apos;./metadata_sp.xml&apos;</span>);
+</code></pre>
+<p>In SP configuration, <code>loginRequestTemplate</code> is the template of SAML Request, it can be either file name or XML string. This is the default template we&apos;ve used in our module.</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">samlp:AuthnRequest</span> 
+    <span class="hljs-attribute">xmlns:samlp</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>     
+    <span class="hljs-attribute">xmlns:saml</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;</span> 
+    <span class="hljs-attribute">ID</span>=<span class="hljs-value">&quot;{ID}&quot;</span> 
+    <span class="hljs-attribute">Version</span>=<span class="hljs-value">&quot;2.0&quot;</span> 
+    <span class="hljs-attribute">IssueInstant</span>=<span class="hljs-value">&quot;{IssueInstant}&quot;</span> 
+    <span class="hljs-attribute">Destination</span>=<span class="hljs-value">&quot;{Destination}&quot;</span> 
+    <span class="hljs-attribute">ProtocolBinding</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> 
+    <span class="hljs-attribute">AssertionConsumerServiceURL</span>=<span class="hljs-value">&quot;{AssertionConsumerServiceURL}&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">saml:Issuer</span>&gt;</span>{Issuer}<span class="hljs-tag">&lt;/<span class="hljs-title">saml:Issuer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">samlp:NameIDPolicy</span> 
+        <span class="hljs-attribute">Format</span>=<span class="hljs-value">&quot;{NameIDFormat}&quot;</span> 
+        <span class="hljs-attribute">AllowCreate</span>=<span class="hljs-value">&quot;{AllowCreate}&quot;</span>/&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">samlp:AuthnRequest</span>&gt;</span>
+</code></pre>
+<p>When you apply your own template, remember to do custom tag replacement when you send out the request. <code>replaceTagFromTemplate</code> is just the name here to illustrate but it&apos;s not fixed.</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp, <span class="hljs-string">&apos;redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+        res.redirect(url);
+    }, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">loginRequestTemplate</span>) </span>{
+        <span class="hljs-comment">// Here is the callback function for custom template</span>
+        <span class="hljs-comment">// the input parameter is the value of loginRequestTemplate</span>
+        <span class="hljs-comment">// The following is the input parameter of rcallback in different actions</span>
+        <span class="hljs-comment">// sp.sendLoginRequest -&gt; loginRequestTemplate</span>
+        <span class="hljs-comment">// sp.sendLogoutResponse -&gt; logoutResponseTemplate</span>
+        <span class="hljs-comment">// idp.sendLoginResponse -&gt; loginResponseTemplate</span>
+        <span class="hljs-comment">// idp.sendLogoutRequest -&gt; logoutRequestTemplate</span>
+        <span class="hljs-keyword">return</span> replaceTagFromTemplate(loginRequestTemplate);
+        <span class="hljs-comment">// replaceTagFromTemplate is a function to do dynamically substitution of tags</span>
+    });
+});
+</code></pre>
+<p>Developers may want to use our default tag replacement <code>saml.SamlLib.replaceTagsByValue</code> instead of writing their own <code>replaceTagFromTemplate</code>. It replaces all defined tags in the input XML string. This method is supported with version &gt;= 1.1.6.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> saml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-saml2&apos;</span>);
+<span class="hljs-keyword">var</span> lib = saml.SamlLib;
+<span class="hljs-keyword">var</span> requestTags = saml.Constants.tags.request;
+<span class="hljs-comment">// ...</span>
+router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp, <span class="hljs-string">&apos;redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+    <span class="hljs-comment">// ...</span>
+        <span class="hljs-keyword">return</span> lib.replaceTagFromTemplate(loginRequestTemplate, requestTags);
+    <span class="hljs-comment">// ...</span>
+    });
+});
+</code></pre>
+<p>The default tag list includes:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports.tags = {
+    request: {
+        AllowCreate: <span class="hljs-string">&apos;{AllowCreate}&apos;</span>,
+        AssertionConsumerServiceURL: <span class="hljs-string">&apos;{AssertionConsumerServiceURL}&apos;</span>,
+        AuthnContextClassRef: <span class="hljs-string">&apos;{AuthnContextClassRef}&apos;</span>,
+        AssertionID: <span class="hljs-string">&apos;{AssertionID}&apos;</span>,
+        Audience: <span class="hljs-string">&apos;{Audience}&apos;</span>,
+        AuthnStatement: <span class="hljs-string">&apos;{AuthnStatement}&apos;</span>,
+        AttributeStatement: <span class="hljs-string">&apos;{AttributeStatement}&apos;</span>,
+        ConditionsNotBefore: <span class="hljs-string">&apos;{ConditionsNotBefore}&apos;</span>,
+        ConditionsNotOnOrAfter: <span class="hljs-string">&apos;{ConditionsNotOnOrAfter}&apos;</span>,
+        Destination: <span class="hljs-string">&apos;{Destination}&apos;</span>,
+        EntityID: <span class="hljs-string">&apos;{EntityID}&apos;</span>,
+        ID: <span class="hljs-string">&apos;{ID}&apos;</span>,
+        Issuer: <span class="hljs-string">&apos;{Issuer}&apos;</span>,
+        IssueInstant: <span class="hljs-string">&apos;{IssueInstant}&apos;</span>,
+        InResponseTo: <span class="hljs-string">&apos;{InResponseTo}&apos;</span>,
+        NameID: <span class="hljs-string">&apos;{NameID}&apos;</span>,
+        NameIDFormat: <span class="hljs-string">&apos;{NameIDFormat}&apos;</span>,
+        ProtocolBinding: <span class="hljs-string">&apos;{ProtocolBinding}&apos;</span>,
+        SessionIndex: <span class="hljs-string">&apos;{SessionIndex}&apos;</span>,
+        SubjectRecipient: <span class="hljs-string">&apos;{SubjectRecipient}&apos;</span>,
+        SubjectConfirmationDataNotOnOrAfter: <span class="hljs-string">&apos;{SubjectConfirmationDataNotOnOrAfter}&apos;</span>,
+        StatusCode: <span class="hljs-string">&apos;{StatusCode}&apos;</span>
+    },
+    <span class="hljs-comment">// ...</span>
+};
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./configuration_without_metadata.html" class="navigation navigation-prev " aria-label="Previous page: Configuration without metadata"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./multiple_entities.html" class="navigation navigation-next " aria-label="Next page: Multiple entities"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Signed SAML Request | express-saml2</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.3">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="./receive_a_saml_response.html" />
+    
+    
+    <link rel="prev" href="./send_a_saml_request.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.3.2" data-basepath="." data-revision="Tue Oct 27 2015 16:06:16 GMT+0800 (HKT)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="./index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basics.html">
+            
+                
+                    <a href="./basics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Basics
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="knowledge.html">
+            
+                
+                    <a href="./knowledge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Knowledge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic_identity_provider.html">
+            
+                
+                    <a href="./basic_identity_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Identity Provider
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic_service_provider.html">
+            
+                
+                    <a href="./basic_service_provider.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Service Provider
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="send_a_saml_request.html">
+            
+                
+                    <a href="./send_a_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.1.</b>
+                        
+                        SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="signed_saml_request.html">
+            
+                
+                    <a href="./signed_saml_request.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.2.</b>
+                        
+                        Signed SAML Request
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="receive_a_saml_response.html">
+            
+                
+                    <a href="./receive_a_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.3.</b>
+                        
+                        SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="signed_saml_response.html">
+            
+                
+                    <a href="./signed_saml_response.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.4.</b>
+                        
+                        Signed SAML Response
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="encrypted_assertion.html">
+            
+                
+                    <a href="./encrypted_assertion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.5.</b>
+                        
+                        Encrypted SAML Response
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="work_examples.html">
+            
+                
+                    <a href="./work_examples.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Work with OneLogin
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="advanced.html">
+            
+                
+                    <a href="./advanced.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Advanced
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="configuration_without_metadata.html">
+            
+                
+                    <a href="./configuration_without_metadata.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Configuration without metadata
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="custom_templates.html">
+            
+                
+                    <a href="./custom_templates.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Custom templates
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="multiple_entities.html">
+            
+                
+                    <a href="./multiple_entities.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Multiple entities
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="metadata_distribution.html">
+            
+                
+                    <a href="./metadata_distribution.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Metadata distribution
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="./" >express-saml2</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="signed-saml-request">Signed SAML Request</h1>
+<p>We follow the preference in metadata files. If it doesn&apos;t state in the metadata, default is not to sign the SAML Request.</p>
+<p>In IdP&apos;s metadata, there is an attribute called <code>WantAuthnRequestsSigned</code>. Default value is <code>false</code>.</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">IDPSSODescriptor</span> 
+    <span class="hljs-attribute">WantAuthnRequestsSigned</span>=<span class="hljs-value">&quot;true&quot;</span>
+    <span class="hljs-attribute">ID</span>=<span class="hljs-value">&quot;SM14a93e72cb19411b4fc4eec882c98b12dbf55cea68e&quot;</span>
+    <span class="hljs-attribute">protocolSupportEnumeration</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>&gt;</span>
+</code></pre>
+<p>In SP&apos;s metadata, there is an attribute called <code>AuthnRequestsSigned</code>. Default value is <code>false</code>.</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">SPSSODescriptor</span> 
+    <span class="hljs-attribute">AuthnRequestsSigned</span>=<span class="hljs-value">&quot;true&quot;</span>         
+    <span class="hljs-attribute">protocolSupportEnumeration</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>&gt;</span>
+</code></pre>
+<p>And also include the X.509 certificate in SP&apos;s metadata.</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-title">SPSSODescriptor</span> 
+    <span class="hljs-attribute">AuthnRequestsSigned</span>=<span class="hljs-value">&quot;true&quot;</span> 
+    <span class="hljs-attribute">WantAssertionsSigned</span>=<span class="hljs-value">&quot;true&quot;</span> 
+    <span class="hljs-attribute">protocolSupportEnumeration</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">KeyDescriptor</span> <span class="hljs-attribute">use</span>=<span class="hljs-value">&quot;signing&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">KeyInfo</span> <span class="hljs-attribute">xmlns:ds</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">X509Data</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">X509Certificate</span>&gt;</span>MIIDozCCAougAwIBAgIJAKN...<span class="hljs-tag">&lt;/<span class="hljs-title">X509Certificate</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">X509Data</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">KeyInfo</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">KeyDescriptor</span>&gt;</span>
+...
+</code></pre>
+<p>If both two attributes are not matched, an error will be thrown out during run-time. Developers can easily locate the error.</p>
+<p>If IdP doesn&apos;t provide the metadata for you, 1) you may ask them 2) import an object setting, see advanced topics <a href="">here</a>.</p>
+<p>Metadata stores the preferences only. To sign a XML document, we still need our <strong>private key</strong> and <strong>signature algorithm</strong>. We can configure our SP here:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> saml = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-saml2&apos;</span>);
+<span class="hljs-comment">// Define the setting</span>
+<span class="hljs-keyword">var</span> setting = {
+    privateKeyFile: <span class="hljs-string">&apos;./key/sp_key.pem&apos;</span>,
+    privateKeyFilePass: <span class="hljs-string">&apos;KCkGOSjrcAuXFwU1pVH5RUiBcrsNA8px&apos;</span>,
+    requestSignatureAlgorithm: <span class="hljs-string">&apos;http://www.w3.org/2001/04/xmldsig-more#rsa-sha512&apos;</span>
+};
+<span class="hljs-comment">// Construct our service provider</span>
+<span class="hljs-keyword">var</span> sp = saml.ServiceProvider(setting, <span class="hljs-string">&apos;./metadata_sp.xml&apos;</span>);
+</code></pre>
+<p>The property <code>privateKeyFilePass</code> is optional in case you have set a passphrase when the private key is created. Also the default value of <code>requestSignatureAlgorithm</code> is RSA-SHA1.</p>
+<p>All support signature algorithms:</p>
+<pre><code class="lang-javascript"><span class="hljs-string">&apos;http://www.w3.org/2000/09/xmldsig#rsa-sha1&apos;</span>,
+<span class="hljs-string">&apos;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&apos;</span>,
+<span class="hljs-string">&apos;http://www.w3.org/2001/04/xmldsig-more#rsa-sha512&apos;</span>
+</code></pre>
+<p>Once you have configured the SP correctly, all you need to send a signed SAML Request is to do as follow:</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/spinitsso-redirect&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    sp.sendLoginRequest(idp,<span class="hljs-string">&apos;redirect&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">url</span>) </span>{
+        res.redirect(url);
+    });
+});
+</code></pre>
+<p>Yes, it&apos;s the same method we used to send a SAML Request without signature. </p>
+<p><strong>How to generate a signature</strong></p>
+<p>For those who are not interested in how the signature generates, you can skip this section. The signature is generated by two different formats.</p>
+<p>In <strong>Redirect-Binding</strong>, the URL-encoded message should be assigned as follow:</p>
+<ul>
+<li>Octet string is a concatenation of SAMLRequest, RelayState and SigAlg.<code>SAMLRequest=xxx&amp;RelayState=yyy&amp;SigAlg=zzz</code></li>
+<li>Signature MUST be encoded by base64 encoding.</li>
+<li>RelayState is an optional parameter. If there is no RelayState value, this parameter should be ignored from computing signature. e.g. <code>SAMLRequest=xxx&amp;SigAlg=zzz</code></li>
+</ul>
+<p>In <strong>Post-Binding</strong>, XML digital signature is used and embedded inside the Request XML.</p>
+<pre><code class="lang-javascript">&lt;samlp:AuthnRequest
+    xmlns:samlp=<span class="hljs-string">&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;</span>
+    xmlns:saml=<span class="hljs-string">&quot;urn:oasis:names:tc:SAML:2.0:assertion&quot;</span>
+    ID=<span class="hljs-string">&quot;_809707f0030a5d00620c9d9df97f627afe9dcc24&quot;</span> 
+    Version=<span class="hljs-string">&quot;2.0&quot;</span> 
+    ProviderName=<span class="hljs-string">&quot;SP test&quot;</span> 
+    IssueInstant=<span class="hljs-string">&quot;2014-07-16T23:52:45Z&quot;</span> 
+    Destination=<span class="hljs-string">&quot;https://idp.example.org/SSOService&quot;</span>
+    ProtocolBinding=<span class="hljs-string">&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot;</span> 
+    AssertionConsumerServiceURL=<span class="hljs-string">&quot;https://sp.example.org/sso/acs&quot;</span>&gt;
+
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">saml:Issuer</span> <span class="hljs-attribute">Id</span>=<span class="hljs-value">&quot;_0&quot;</span>&gt;</span>https://sp.example.org/metadata<span class="hljs-tag">&lt;/<span class="hljs-title">saml:Issuer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">samlp:NameIDPolicy</span> <span class="hljs-attribute">Format</span>=<span class="hljs-value">&quot;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&quot;</span> <span class="hljs-attribute">AllowCreate</span>=<span class="hljs-value">&quot;true&quot;</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">samlp:RequestedAuthnContext</span> <span class="hljs-attribute">Comparison</span>=<span class="hljs-value">&quot;exact&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">saml:AuthnContextClassRef</span>&gt;</span>urn:oasis:names:tc:SAML:2.0:ac:classes:Password<span class="hljs-tag">&lt;/<span class="hljs-title">saml:AuthnContextClassRef</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">samlp:RequestedAuthnContext</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-title">Signature</span> <span class="hljs-attribute">xmlns</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">SignedInfo</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">CanonicalizationMethod</span> <span class="hljs-attribute">Algorithm</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">SignatureMethod</span> <span class="hljs-attribute">Algorithm</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;</span>/&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">Reference</span> <span class="hljs-attribute">URI</span>=<span class="hljs-value">&quot;#_0&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">Transforms</span>&gt;</span>
+                        <span class="hljs-tag">&lt;<span class="hljs-title">Transform</span> <span class="hljs-attribute">Algorithm</span>=<span class="hljs-value">&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot;</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;/<span class="hljs-title">Transforms</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">DigestMethod</span> <span class="hljs-attribute">Algorithm</span>=<span class="hljs-value">&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;</span>/&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-title">DigestValue</span>&gt;</span>tQDisBXKTQ+9OXJO5r7KuJga+KI=<span class="hljs-tag">&lt;/<span class="hljs-title">DigestValue</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-title">Reference</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">SignedInfo</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">SignatureValue</span>&gt;</span>oxRkvau7UvYgFEZ7YNAUNf3067V7Tn5C9XSIiet1aZw2FYevNW5bUy/0mxp3aj6AvfFjnmpzAb88BjdwAz2BErDTomRcuZB7Lb0fYTf31N2oZOX0MiPiQOH54I63qJW4Xo3VqdF7GBuFZZHyllfSBv7gfCtjJDwFSCzWK70B9r3cFMRJZLhCJ9oPen+4U9scSYO6g+szBZLl6AiJ06PHc8jzEKGwfQrcZk8kDKUlvNfJMULyq8dpx2VvUAx4p5ewfMOwB9W3Hl3PPa0dO77zZif3CglpcN06f+m6UYG/wnoTQEyKW9hOe+2vGM80W77eWu0dmiaPuqT1ok8LXPuq1A==<span class="hljs-tag">&lt;/<span class="hljs-title">SignatureValue</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">Signature</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">samlp:AuthnRequest</span>&gt;</span>
+</span></code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="./send_a_saml_request.html" class="navigation navigation-prev " aria-label="Previous page: SAML Request"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="./receive_a_saml_response.html" class="navigation navigation-next " aria-label="Next page: SAML Response"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="gitbook/app.js"></script>
+
+    
+    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
