@@ -40,7 +40,7 @@
     <body>
         
         
-    <div class="book" data-level="2.1" data-basepath="." data-revision="Tue Oct 27 2015 16:06:16 GMT+0800 (HKT)">
+    <div class="book" data-level="2.1" data-basepath="." data-revision="Mon Feb 08 2016 22:48:03 GMT+0800 (HKT)">
     
 
 <div class="book-summary">
@@ -421,6 +421,68 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="configuration-without-metadata">Configuration without metadata</h1>
+<p>Without importing a defined metadata, we also provide an advanced way to configure the entities. The metadata can also be created according to the parameters later on.</p>
+<h2 id="identity-provider">Identity Provider</h2>
+<p>Currently, we suggest developers to use other 3rd party IdP even though we provide the basic API for identity provider.</p>
+<h2 id="service-provider">Service Provider</h2>
+<pre><code>/**
+*
+* var sp = new ServiceProvider({
+*     // see the following parameters 
+* });
+*
+* The following parameters are required: 
+*
+* @param {array} assertionConsumerService
+* @param {string} entityID
+*
+* The following parameters are optional:
+*
+* @param {boolean} allowCreate : Default is false
+* @param {boolean} authnRequestsSigned : Default is false
+* @param {string} dataEncryptionAlgorithm : Default is `http://www.w3.org/2001/04/xmlenc#aes256-cbc`
+* @param {string} encryptCertFile : It is required if `isAssertionEncrypted` is set to `true`
+* @param {function} generateID : It is used to generate the id of each request to perform extra validation and avoid conflict
+* @param {boolean} isAssertionEncrypted : Default is false
+* @param {string} keyEncryptionAlgorithm : Default is `http://www.w3.org/2001/04/xmlenc#rsa-1_5`
+* @param {array} nameIDFormat : Default is an empty array
+* @param {string} requestSignatureAlgorithm : Default is `http://www.w3.org/2000/09/xmldsig#rsa-sha1` 
+* @param {string} signingCertFile : It is required if `authnRequestsSigned` is set to `true`
+* @param {array} singleLogoutService : Default is an empty array
+* @param {boolean} wantAssertionsSigned : Default is false
+* @param {boolean} wantLogoutResponseSigned : Default is false
+* @param {boolean} wantLogoutRequestSigned : Default is false
+*
+**/
+</code></pre><h3 id="-array-assertionconsumerservice">{array} assertionConsumerService</h3>
+<p>It is defined as an array, each element is with the following parameters.</p>
+<pre><code>/**
+* @param {string} Binding : SAML 2.0 Bindings
+* @param {string} Location : Endpoint of assertion consumer service
+**/
+
+// Example
+{
+    // ...
+    assertionConsumerService: [{
+        Binding: &apos;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&apos;
+        Location: &apos;http://localhost:4002/sso/acs&apos;
+    }]
+    // ...
+}
+</code></pre><h3 id="-string-entityid">{string} entityID</h3>
+<p>Specifies the unique identifier of the entity whose metadata is described by the contents of element. See <a href="https://www.oasis-open.org/committees/download.php/35391/sstc-saml-metadata-errata-2.0-wd-04-diff.pdf" target="_blank">P.11</a></p>
+<h3 id="-array-singlelogoutservice">{array} singleLogoutService</h3>
+<p>The configuration is same as <code>assertionConsumerService</code>.</p>
+<pre><code>/**
+* @param {string} Binding : SAML 2.0 Bindings
+* @param {string} Location : Endpoint of single logout service
+**/
+</code></pre><h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.oasis-open.org/committees/download.php/35391/sstc-saml-metadata-errata-2.0-wd-04-diff.pdf" target="_blank">Metadata for the OASIS Security Assertion Markup Language</a></li>
+<li><a href="http://saml.xml.org/saml-specifications" target="_blank">SAML specification</a></li>
+</ul>
 
                     
                     </section>
@@ -441,10 +503,6 @@
 
         
 <script src="gitbook/app.js"></script>
-
-    
-    <script src="gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
-    
 
 <script>
 require(["gitbook"], function(gitbook) {
